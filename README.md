@@ -2,8 +2,12 @@
 Trying to prove that my suggested method is the most efficient for creating a hard bingo
 
 # Updates
+## May 25th, ~14:43 MSK
+I rewrote a certain part of the program and also added type annotations. (I kinda wish there were typedef's in Python...) It now outputs invalid combinations, I'll try rewriting it again :(
+
 ## May 25th, ~14:23 MSK
-So... it didn't find anything. I'll try fixing it. Also, I thought it would take longer.
+So... it didn't find anything. I'll try fixing it. Also, I thought it would take longer.\
+**EDIT**: longer to execute*
 
 ## May 25th, ~14:22 MSK
 I wrote the program. You can check it out in the `main.py` file. It takes a while to execute. I wonder if I can optimise it. Also, it didn't actually take that long for me to write it - I took a break :)
