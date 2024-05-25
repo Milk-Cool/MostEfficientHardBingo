@@ -1,4 +1,4 @@
-# v4
+# v5
 
 import copy
 
@@ -24,7 +24,7 @@ def stat_bingo(bingo: list[list[bool]]) -> tuple[list[int], list[int], list[int]
                 continue
             if x - y == 0:
                 diagonals_covered[0] += 1
-            if y - x == 0:
+            if x - (BINGO_SIZE - y - 1) == 0:
                 diagonals_covered[1] += 1
             columns_covered[x] += 1
             rows_covered[y] += 1
@@ -42,15 +42,19 @@ def print_stats(stats: tuple[list[int], list[int], list[int]], bingo: list[list[
             # green if marked else red
             print("\x1b[42m" if bingo[x][y] else "\x1b[41m", end="")
             cnt = columns_covered[x] + rows_covered[y]
-            acnt += cnt
             if x - y == 0:
                 cnt += diagonals_covered[0]
-            elif y - x == 0:
+            if x - (BINGO_SIZE - y - 1) == 0:
                 cnt += diagonals_covered[1]
+            if bingo[x][y]:
+                acnt += cnt
             print(str(cnt), end="")
             print("\x1b[0m", end="")
         print("|")
     print("-" * (BINGO_SIZE * 2 + 1))
+    print("Rows covered:", " ".join(map(str, rows_covered)))
+    print("Columns covered:", " ".join(map(str, columns_covered)))
+    print("Diagonals covered:", " ".join(map(str, diagonals_covered)))
     return acnt
 
 
