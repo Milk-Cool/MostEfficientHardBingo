@@ -1,4 +1,4 @@
-# v2
+# v3
 
 import copy
 
@@ -81,7 +81,7 @@ def recurse_bingos(depth, bingo: list[list[bool]], checker, cb):
 def check_bingo(stats: tuple[list[int], list[int], list[int]], bingo: list[list[bool]]):
     rows_covered, columns_covered, diagonals_covered = stats
     cnt = 0
-    
+
     for x in range(BINGO_SIZE):
         if columns_covered[x] != 1:
             return False
@@ -91,7 +91,7 @@ def check_bingo(stats: tuple[list[int], list[int], list[int]], bingo: list[list[
     for i in range(2):
         if diagonals_covered[i] != 1:
             return False
-    
+
     for x in range(BINGO_SIZE):
         for y in range(BINGO_SIZE):
             if bingo[x][y]:
@@ -114,7 +114,8 @@ def main():
         recurse_bingos(i, bingo, check_bingo, bingo_callback)
         results += [(i, min_acnt, min_stats_bingos)]
     for result in results:
-        print(result[1], "combinations found for", result[0], "marked cells")
+        print(len(result[2]), "combinations found for",
+              result[0], "marked cells with", result[1], "score")
         for stat_bingo in result[2]:
             print_stats(stat_bingo[0], stat_bingo[1])
 

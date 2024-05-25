@@ -2,6 +2,10 @@
 Trying to prove that my suggested method is the most efficient for creating a hard bingo
 
 # Updates
+## May 25th, ~15:00 MSK
+I rewrote another part, and most combinations still don't meet my criteria. I'll review them and rewrite the program again.\
+I've also added out.log and out_final.log to .gitignore for storing results.
+
 ## May 25th, ~14:43 MSK
 I rewrote a certain part of the program and also added type annotations. (I kinda wish there were typedef's in Python...) It now outputs invalid combinations, I'll try rewriting it again :(
 
