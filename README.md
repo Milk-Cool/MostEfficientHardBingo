@@ -2,6 +2,9 @@
 Trying to prove that my suggested method is the most efficient for creating a hard bingo
 
 # Updates
+## May 25th, ~15:21 MSK
+I improved my program once again, this time it excludes the repeating combinations. It takes roughly 3 minutes to complete on my laptop. I'm pretty close – it only shows 45 "valid" combinations now. Some of them are actually invalid because they don't have a single square on a diagonal so I'll have to do a bit more coding.
+
 ## May 25th, ~15:00 MSK
 I rewrote another part, and most combinations still don't meet my criteria. I'll review them and rewrite the program again.\
 I've also added out.log and out_final.log to .gitignore for storing results.

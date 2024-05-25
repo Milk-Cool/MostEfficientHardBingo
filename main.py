@@ -1,4 +1,4 @@
-# v3
+# v4
 
 import copy
 
@@ -112,6 +112,12 @@ def main():
         bingo = [[False for _y in range(BINGO_SIZE)]
                  for _x in range(BINGO_SIZE)]
         recurse_bingos(i, bingo, check_bingo, bingo_callback)
+        to_delete = []
+        for i in range(len(min_stats_bingos)):
+            if min_stats_bingos[i][1] in list(map(lambda x: x[1], min_stats_bingos[i + 1:])):
+                to_delete += [i]
+        for i in reversed(to_delete):
+            del min_stats_bingos[i]
         results += [(i, min_acnt, min_stats_bingos)]
     for result in results:
         print(len(result[2]), "combinations found for",
