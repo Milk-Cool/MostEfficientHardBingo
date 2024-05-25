@@ -2,6 +2,9 @@
 Trying to prove that my suggested method is the most efficient for creating a hard bingo
 
 # Updates
+## May 25th, ~14:22 MSK
+I wrote the program. You can check it out in the `main.py` file. It takes a while to execute. I wonder if I can optimise it. Also, it didn't actually take that long for me to write it - I took a break :)
+
 ## May 25th, ~12:56 MSK
 I think I found the most efficient way to make a hard bingo?
 It looks something like this:
