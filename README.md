@@ -1,2 +1,25 @@
 # MostEfficientHardBingo
 Trying to prove that my suggested method is the most efficient for creating a hard bingo
+
+# Updates
+## May 25th, ~12:56 MSK
+I think I found the most efficient way to make a hard bingo?
+It looks something like this:
+||▮▮||||
+|-|-|-|-|-|
+|▮▮|||||
+|||▮▮|||
+|||||▮▮|
+||||▮▮||
+
+Or like this:
+||||▮▮||
+|-|-|-|-|-|
+|||||▮▮|
+|||▮▮|||
+|▮▮|||||
+||▮▮||||
+
+I think that it is the mosty efficient because it covers all of the combinations (all rows, columns and diagonals) with the least amount of squares.\
+It works like this: you put the hardest to check square in the middle becuase it covers a row, a column and both diagonals at the same time, and the four next hardest to check squares in the other four marked squares because each covers a row and a column. I think that this is the most efficient way to cover all rows, columns and diagonals since there are no marked squares that cover a row or a column that was covered by another marked square.\
+I'll try proving that it is the most efficient way with a Python program. Or maybe I'll find a new way that is as efficient as this one or even more efficient. Who knows :)
